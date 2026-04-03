@@ -1,0 +1,14 @@
+name: agentic-ai
+
+services:
+  qdrantdb:
+    image: qdrant/qdrant
+    container_name: qdrantdb-container
+    ports:
+      - "6333:6333"
+    networks:
+      - user_network
+
+networks:
+  user_network:
+    name: user-network
